@@ -14,7 +14,7 @@ object Application extends Controller {
         Log.find.map {
           res =>
             Log.create().map {
-              l =>
+              l => //Ok("")
             }
             val id: Long = res map (r => r.id) getOrElse 0
             Ok(Map("id" -> id).toString())
